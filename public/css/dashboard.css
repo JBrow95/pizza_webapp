@@ -1,0 +1,33 @@
+html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: #151519;
+	display: table;
+}
+
+.nav {
+	text-align: center;
+	margin-top: 40px;
+}
+
+li {
+	list-style: none;
+	display: inline-block;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-weight: lighter;
+	padding: 15px;
+}
