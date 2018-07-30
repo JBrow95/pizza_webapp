@@ -1,33 +1,202 @@
-html {
+html, body {
 	margin: 0;
 	padding: 0;
 	width: 100%;
 }
 
 body {
-	margin: 0;
-	padding: 0;
+	font-family: Quicksand;
+	background: #000;
+}
+
+
+header {
 	width: 100%;
 	height: 100vh;
-	background-color: #151519;
-	display: table;
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/724216/pexels-photo-724216.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940") no-repeat 50% 50%;
+	background-size: cover;
 }
 
-.nav {
-	text-align: center;
-	margin-top: 40px;
+.logo {
+	color: #fff;
+	position: fixed;
+	float: left;
+	margin: 16px 36px;
+	font-weight: bold;
+	font-size: 26px;
+	letter-spacing: 2px;
+	cursor: pointer;
 }
 
-li {
+.active {
+	border-bottom: 1.5px solid #ff5400;
+}
+
+nav {
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+}
+
+nav ul {
 	list-style: none;
-	display: inline-block;
+	background: rgba(0,0,0,0);
+	overflow: hidden;
+	color: #fff;
+	padding: 0;
+	text-align: center;
+	margin: 0;
+	transition: 1s;
+	font-weight: lighter;
 }
 
-a {
+
+
+nav.black ul {
+	background: #000;
+}
+
+nav ul li {
+	display: inline-block;
+	padding: 20px;
+}
+
+nav ul li a {
 	text-decoration: none;
 	color: #fff;
-	text-transform: uppercase;
-	font-family: sans-serif;
-	font-weight: lighter;
+	font-size: 24px;
+}
+
+nav ul li a:hover {
+	border-bottom: 1.5px solid red;
+}
+
+.menu-icon {
+	width: 100%;
+	background: #000;
+	text-align: right;
+	box-sizing: border-box;
+	padding: 15px 24px;
+	cursor: pointer;
+	color: #fff;
+	display: none;
+}
+
+button {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 1.5px solid #fff;
 	padding: 15px;
+	outline: none;
+	background: transparent;
+	color: #fff;
+	font-weight: normal;
+	font-family: 'Quicksand';
+	font-size: 45px;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: 0.2s;
+	z-index: 0;
+}
+
+button:hover {
+	background-color: #fff;
+	color: #000;
+	
+}
+
+@media(max-width: 700px) {
+	.logo {
+		position: fixed;
+		top: 0;
+		margin-top: 16px;
+	}
+
+	nav ul {
+		max-height: 0px;
+		background: #000;
+	}
+
+	nav.black ul {
+		background: #000;
+	}
+
+	.showing {
+		max-height: 30em;
+	}
+
+	nav ul li {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 24px 0;
+		text-align: center;
+	}
+
+	.menu-icon {
+		display: block;
+	}
+
+	button {
+	position: relative;
+	top: 80%;
+	transform: translate(-50%, -50%);
+	border: 1.5px solid #fff;
+	padding: 15px;
+	outline: none;
+	background: transparent;
+	color: #fff;
+	font-weight: normal;
+	font-family: 'Quicksand';
+	font-size: 35px;
+	}
+
+}
+
+
+/* Page content */
+
+
+
+.content {
+	width: 100%;
+}
+
+.about-header {
+	float: left;
+	background: #d64600;
+	width: 50%;
+	text-align: center;
+	font-size: 20px;
+}
+
+.contact-header {
+	float: right;
+	background: rgba(255,255,255,0.9);
+	float: right;
+	width: 50%;
+	text-align: center;
+	font-size: 20px;
+}
+
+span {
+	color: #d64600;
+}
+
+.content2 {
+	color: #fff;
+	width: 50%;
+	font-size: 24px;
+}
+
+.content2 p {
+	margin-top: 30px;
+}
+
+.content3 p{
+	float: right;
+	color: #fff;
+	width: 50%;
+	font-size: 24px;
 }
