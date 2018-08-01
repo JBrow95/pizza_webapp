@@ -6,15 +6,23 @@ html, body {
 
 body {
 	font-family: Quicksand;
-	background: #000;
+	background: #444;
+	overflow-x: hidden;
 }
 
 
+
+
 header {
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://images.pexels.com/photos/724216/pexels-photo-724216.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=650&amp;w=940") no-repeat 50% 50%;
 	background-size: cover;
+}
+
+
+span {
+	color: #ff6e00;
 }
 
 .logo {
@@ -26,6 +34,11 @@ header {
 	font-size: 26px;
 	letter-spacing: 2px;
 	cursor: pointer;
+}
+
+.logo a {
+	text-decoration: none;
+	color: #fff;
 }
 
 .active {
@@ -140,7 +153,6 @@ button:hover {
 
 	button {
 	position: relative;
-	top: 80%;
 	transform: translate(-50%, -50%);
 	border: 1.5px solid #fff;
 	padding: 15px;
@@ -157,46 +169,81 @@ button:hover {
 
 /* Page content */
 
-
-
-.content {
-	width: 100%;
+.about h1 {
+	padding: 10px;
+	font-size: 40px;
 }
 
-.about-header {
-	float: left;
-	background: #d64600;
-	width: 50%;
-	text-align: center;
-	font-size: 20px;
-}
-
-.contact-header {
-	float: right;
-	background: rgba(255,255,255,0.9);
-	float: right;
-	width: 50%;
-	text-align: center;
-	font-size: 20px;
-}
-
-span {
-	color: #d64600;
-}
-
-.content2 {
-	color: #fff;
-	width: 50%;
+.about p {
 	font-size: 24px;
+	padding: 10px;
 }
 
-.content2 p {
-	margin-top: 30px;
+.app-section {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 50px;
+	background: rgba(0,0,0,0.8);
+	box-sizing: border-box;
+	box-shadow: 0 15px 20px rgba(0,0,0,0.6);
+	border-radius: 15px;
+	height: 600px;
 }
 
-.content3 p{
-	float: right;
+.order-box {
 	color: #fff;
-	width: 50%;
-	font-size: 24px;
+	font-family: 'Quicksand';
+	font-size: 16px;
+	text-align: center;
+}
+
+.order-box p {
+	font-weight: bold;
+	border-bottom: 1px solid #fff;
+	padding: 15px;
+}
+
+.order-box h1 {
+	margin: 0;
+	font-size: 30px;
+}
+
+@media(max-width: 700px) {
+	.app-section {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100vw;
+	padding: 50px;
+	background: rgba(0,0,0,0.8);
+	box-sizing: border-box;
+	box-shadow: 0 15px 20px rgba(0,0,0,0.6);
+	border-radius: 15px;
+	height: 200vw;
+	}
+}
+
+.sub {
+	margin-top: 20px;
+}
+
+.sub input[type="submit"] {
+	outline: none;
+	text-decoration: none;
+	font-family: 'Quicksand';
+	font-size: 20px;
+	font-weight: normal;
+	background: transparent;
+	border: .5px solid #ff5400;
+	color: #fff;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+	background-color: #ff5400;
 }

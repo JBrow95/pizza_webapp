@@ -1,0 +1,70 @@
+<head>
+	<title>Costello's | Home</title>
+	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<nav>
+				<div class="menu-icon">
+					<i class="fa fa-bars fa-2x"></i>
+				</div>
+				<div class="logo">
+					<a href="/">Costello<span>'</span>s</a>
+				</div>
+				<div class="menu">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="#">About</a></li>
+						<li><a href="/custom" class="active">Make It</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>	
+		<div class="app-section">
+			<div class="order-box">
+				<form method="post" action="/order">
+					<h1>Order Here</h1>
+					<p>Size:</p> <input type="checkbox" name="crust">Small
+					<input type="checkbox" name="crust"> Medium
+					<input type="checkbox" name="crust"> Large<br>
+					<p>Crust:</p> <input type="checkbox" name="crust">Thin
+					<input type="checkbox" name="crust"> Pan<br>
+					<p>Toppings:</p> <input type="checkbox" name="crust">Pepperoni
+					<input type="checkbox" name="crust"> Sausage
+					<input type="checkbox" name="crust"> Bacon
+					<input type="checkbox" name="crust"> ham
+					<input type="checkbox" name="crust"> none
+					<p>Vegetables:</p> <input type="checkbox" name="crust">Tomatoe
+					<input type="checkbox" name="crust"> Onion
+					<input type="checkbox" name="crust"> Peppers<br>
+					<div class="sub">
+						<input type="submit" value="Submit Order">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".menu-icon").on("click", function() {
+			$("nav ul").toggleClass("showing");
+		});
+	});
+
+	$(window).on("scroll", function() {
+		if($(window).scrollTop()) {
+			$('nav').addClass('black');
+		}
+		else {
+			$('nav').removeClass('black');
+		}
+	});
+</script>
