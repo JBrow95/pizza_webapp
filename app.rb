@@ -3,7 +3,7 @@ require_relative 'pizza_app.rb'
 
 enable :sessions
 
-get '/' do 
+get '/' do
   
   erb :dashboard
 end
@@ -17,8 +17,11 @@ post '/order' do
 	size = params[:size]
 	crust = params[:crust] 
 	veggies = params[:veggies]
+	veggies2 = params[:veggies]
+	veggies3 = params[:veggies]
+	veggies4 = params[:veggies]
 	meats = params[:meats]
-	session[:order] = order(crust, veggies, meats, size)
+	session[:order] = order(crust, veggies, veggies2 , veggies3, veggies4, meats, size)
 	redirect '/result'
 end
 
@@ -27,7 +30,11 @@ get '/result' do
 	erb :result, locals:{order: order}
 end
 
-get '/contact' do
+post '/order2' do
+	redirect '/delivery'
+end
 
-	erb :contact
+get '/delivery' do
+
+	erb :delivery
 end
