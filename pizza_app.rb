@@ -15,6 +15,7 @@ def veggies()
 end
 
 def order(crust, veggies, meats, size) 
+	price = 0
 	size_choice = size().index(size)
 	crust_choice = crust().index(crust)
 	veg_choice = veggies().index(veggies)
@@ -23,5 +24,14 @@ def order(crust, veggies, meats, size)
 	v = veggies()[veg_choice]
 	m = meats()[meat_choice]
 	s = size()[size_choice]
-	order = "Size: #{s.capitalize}<br>Crust: #{c.capitalize}<br>Vegetables: #{v.capitalize}<br>Toppings: #{m.capitalize}"
+	if s == "small"
+		price += 5.00
+	elsif s == "medium"
+		price += 8.00
+	else
+		price += 10.00
+	end
+	price
+	order = "Size:  #{s.capitalize}<br>Crust:  #{c.capitalize}<br>Vegetables:  #{v.capitalize}<br>Toppings:  #{m.capitalize}<br>Price: #{price}"
 end
+

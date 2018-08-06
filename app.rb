@@ -3,7 +3,7 @@ require_relative 'pizza_app.rb'
 
 enable :sessions
 
-get '/' do
+get '/' do 
   
   erb :dashboard
 end
@@ -25,4 +25,9 @@ end
 get '/result' do
 	order = session[:order] || ""
 	erb :result, locals:{order: order}
+end
+
+get '/contact' do
+
+	erb :contact
 end

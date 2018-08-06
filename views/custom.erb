@@ -21,7 +21,7 @@
 						<li><a href="/">Home</a></li>
 						<li><a href="#">About</a></li>
 						<li><a href="/custom" class="active">Make It</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="/contact">Contact</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -30,19 +30,24 @@
 			<div class="order-box">
 				<form method="post" action="/order">
 					<h1>Order Here</h1>
-					<p id="pic">Size:</p> <input type="checkbox" name="size" value="small">Small
-					<input type="checkbox" name="size" value="medium"> Medium
-					<input type="checkbox" name="size" value="large"> Large<br>
-					<p>Crust:</p> <input type="checkbox" name="crust" value="thin">Thin
-					<input type="checkbox" name="crust" value="pan"> Pan<br>
-					<p>Toppings:</p> <input type="checkbox" name="meats" value="pepperoni">Pepperoni
-					<input type="checkbox" name="meats" value="sausage"> Sausage
-					<input type="checkbox" name="meats" value="bacon"> Bacon
-					<input type="checkbox" name="meats" value="ham"> ham
-					<input type="checkbox" name="meats" value="none"> none
-					<p>Vegetables:</p> <input type="checkbox" name="veggies" value="tomatoe">Tomatoe
-					<input type="checkbox" name="veggies" value="onion"> Onion
-					<input type="checkbox" name="veggies" value="peppers"> Peppers<br>
+					<div class="left">
+						<p id="pic1">Size:</p> <input type="radio" name="size" value="small">Small
+						<input type="radio" name="size" value="medium"> Medium
+						<input type="radio" name="size" value="large"> Large<br>
+						<p>Crust:</p> <input type="checkbox" name="crust" value="thin">Thin
+						<input type="checkbox" name="crust" value="pan"> Pan<br>
+					</div>
+
+					<div class="right">
+						<p>Toppings:</p> <input type="checkbox" name="meats" value="pepperoni">Pepperoni
+						<input type="checkbox" name="meats" value="sausage"> Sausage
+						<input type="checkbox" name="meats" value="bacon"> Bacon
+						<input type="checkbox" name="meats" value="ham"> ham
+						<input type="checkbox" name="meats" value="none"> none
+						<p>Vegetables:</p> <input type="checkbox" name="veggies" value="tomatoe">Tomatoe
+						<input type="checkbox" name="veggies" value="onion"> Onion
+						<input type="checkbox" name="veggies" value="peppers"> Peppers<br>
+					</div>
 					<div class="sub">
 						<input type="submit" value="Submit Order">
 					</div>
