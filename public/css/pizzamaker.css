@@ -3,7 +3,7 @@ body {
 	padding: 0;
 	background: #fff;
 	font-family: 'Quicksand';
-	animation: fadeIn 4s;
+	animation: fadeIn 5s;
 }
 
 @keyframes fadeIn {
@@ -30,7 +30,7 @@ span {
 	float: left;
 	margin: 16px 36px;
 	font-weight: bold;
-	font-size: 26px;
+	font-size: 20px;
 	letter-spacing: 2px;
 	cursor: pointer;
 }
@@ -76,7 +76,7 @@ nav ul li {
 nav ul li a {
 	text-decoration: none;
 	color: #000;
-	font-size: 24px;
+	font-size: 18px;
 }
 
 nav ul li a:hover {
@@ -131,14 +131,14 @@ nav ul li a:hover {
 
 
 .row form{
-	max-width: 1600px;
-	margin: 70px auto 0 auto;
+	max-width: 1150px;
+	margin: 40px auto 0 auto;
 	line-height: 1.65;
 	text-align: center;
 }
 
 .row input[type="checkbox"] {
-	transform: scale(2);
+	transform: scale(1);
 }
 
 .checkboxtext {
@@ -149,15 +149,18 @@ nav ul li a:hover {
 .tops {
 	padding: 20px;
 	margin-bottom: 20px;
-	flex-basis: 30%;
+	flex-basis: 29%;
 	color: #000;
-	font-size: 24px;
+	font-size: 16px;
 }
 
 .tops img {
 	display: flex;
 	margin-left: auto;
 	margin-right: auto;
+	height: 50px;
+	width: 75px;
+	padding: 5px;
 }
 
 @media (min-width: 900px) {
@@ -188,14 +191,15 @@ nav ul li a:hover {
 .header-row {
 	font-family: 'Quicksand';
 	font-weight: bold;
-	max-width: 1200px;
-	margin: 110px auto 0;
+	max-width: 600px;
+	margin: 90px auto 0;
 	color: #000;
 	text-align: center;
 	letter-spacing: 2px;
 	outline: none;
 	border: 0.2em solid #000;
 	border-radius: 10px;
+	font-size: 12px;
 }
 
 
@@ -207,7 +211,7 @@ nav ul li a:hover {
 	border: 1px solid #ff5400;
 	padding: 10px;
 	background: transparent;
-	font-size: 24px;
+	font-size: 16px;
 	border-radius: 10px;
 }
 
