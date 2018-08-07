@@ -7,31 +7,18 @@ def crust()
 end
 
 def meats()
-	['none', 'bacon', 'ham', 'pepperoni', 'sausage']
+	['bacon', 'ham', 'pepperoni', 'sausage']
 end
 
 def veggies()
-	['tomatoe', 'onion', 'peppers', "none"]
+	['tomatoe', 'onion', 'peppers']
 end
 
-def order(crust, veggies, veggies2, veggies3, veggies4, meats, size) 
-	price = 0
+def order(crust, veggies, meats, size) 
+	price = 0.00
 	size_choice = size().index(size)
 	crust_choice = crust().index(crust)
-	veg_choice = veggies().index(veggies)
-	veg_choice2 = veggies().index(veggies2)
-	veg_choice3 = veggies().index(veggies3)
-	veg_choice4 = veggies().index(veggies4)
-	meat_choice = meats().index(meats)
 	c = crust()[crust_choice]
-	v = veggies()[veg_choice] || veggies()[veg_choice2]
-	unless v == "none"
-		price += 0.50
-	end
-	m = meats()[meat_choice]
-	unless m == "none"
-		price += 0.75
-	end
 	s = size()[size_choice]
 	if s == "small"
 		price += 8.00
@@ -41,6 +28,24 @@ def order(crust, veggies, veggies2, veggies3, veggies4, meats, size)
 		price += 15.00
 	end
 	price.to_s
-	order = "Size:  #{s.capitalize}<br>Crust:  #{c.capitalize}<br>Vegetables:  #{v.capitalize}<br>Toppings:  #{m.capitalize}<br>Price: $#{price}"
+	order = "Size:  #{s.capitalize}<br>Crust:  #{c.capitalize}<br>Vegetables: "
+	veggies.each_with_index do |v, i|
+		order += "#{v.capitalize}"
+		if i != veggies.length - 1
+			order += ", "
+		end
+		price += 0.50
+	end
+	order += "<br>Meats: "
+		meats.each_with_index do |n, idx|
+		order += "#{n.capitalize}"
+		if idx != meats.length - 1
+			order += ", "
+		end
+		price += 0.75
+	end
+
+	order += "<br>Price: $#{price}"
+	order
 end
 

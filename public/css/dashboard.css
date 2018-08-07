@@ -51,6 +51,18 @@ nav {
 	z-index: 10;
 }
 
+.nav ul {
+	list-style: none;
+	background: #000;
+	overflow: hidden;
+	color: #fff;
+	padding: 0;
+	text-align: center;
+	margin: 0;
+	transition: 1s;
+	font-weight: lighter;
+}
+
 nav ul {
 	list-style: none;
 	background: rgba(0,0,0,0);
@@ -190,6 +202,7 @@ button:hover {
 	box-shadow: 0 15px 20px rgba(0,0,0,0.6);
 	border-radius: 15px;
 	height: 600px;
+	width: 50vw;
 }
 
 /*.pic {
@@ -260,6 +273,7 @@ input[type="submit"]:hover {
 
 .order h3 {
 	color: #fff;
+	font-weight: lighter;
 }
 
 .app-section2 {
@@ -273,7 +287,7 @@ input[type="submit"]:hover {
 	box-shadow: 0 15px 20px rgba(0,0,0,0.6);
 	border-radius: 15px;
 	width: 500px;
-	height: 300px;
+	height: 580px;
 }
 
 
@@ -295,8 +309,8 @@ input[type="submit"]:hover {
 
 .order button {
 	position: absolute;
-	top: 73%;
-	left: 80%;
+	top: 92%;
+	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
@@ -310,7 +324,7 @@ input[type="submit"]:hover {
 	border-radius: 4px;
 	transition: .3s;
 	overflow: hidden;
-	text-align: center;d
+	text-align: center;
 }
 
 .order button:focus {
@@ -376,6 +390,7 @@ input[type="submit"]:hover {
 	transition: .3s;
 	overflow: hidden;
 	left: 50%;
+	top: 80%;
 }
 
 .order button:focus {
@@ -427,5 +442,27 @@ input[type="submit"]:hover {
 	opacity: 1;
 	transition: 1s;
  }
+
+ .deliver input {
+	width: 100%;
+	outline: none;
+	border: none;
+	background: rgba(255,255,255,1);
+	line-height: 30px;
+	text-align: center;
+	margin-top: 10px;
+	border-radius: 10px;
+	padding-top: 15px;
+}
 }
 
+.deliver input {
+	width: 100%;
+	outline: none;
+	border: none;
+	background: rgba(255,255,255,1);
+	line-height: 30px;
+	padding: 5px;
+	margin-top: 10px;
+	border-radius: 10px;
+}

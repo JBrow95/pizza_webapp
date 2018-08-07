@@ -9,7 +9,7 @@
 <body>
 	<div class="wrapper">
 		<header>
-			<nav>
+			<nav class="nav">
 				<div class="menu-icon">
 					<i class="fa fa-bars fa-2x"></i>
 				</div>
@@ -39,14 +39,14 @@
 					</div>
 
 					<div class="right">
-						<p>Toppings:</p> <input type="checkbox" name="meats" value="pepperoni">Pepperoni
-						<input type="checkbox" name="meats" value="sausage"> Sausage
-						<input type="checkbox" name="meats" value="bacon"> Bacon
-						<input type="checkbox" name="meats" value="ham"> ham
-						<input type="checkbox" name="meats" value="none"> none
-						<p>Vegetables:</p> <input type="checkbox" name="veggies" value="tomatoe">Tomatoe
-						<input type="checkbox" name="veggies" value="onion"> Onion
-						<input type="checkbox" name="veggies" value="peppers"> Peppers<br>
+						<p>Toppings:</p> 
+						<% meats.each do |meat|%>
+							<input type="checkbox" name="meats[]" value="<%= meat%>"><%= meat.capitalize%>
+							<% end%>
+						<p>Vegetables:</p> 
+						<% veggies.each do |vegs|%>
+							<input type="checkbox" name="veggies[]" value="<%= vegs%>"><%= vegs.capitalize%>
+							<% end%>
 					</div>
 					<div class="sub">
 						<input type="submit" value="Submit Order">

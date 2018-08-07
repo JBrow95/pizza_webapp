@@ -1,4 +1,3 @@
-popupFunc() {
-	var s = document.getElementById('pop');
-	s.
+function clickShow() {
+	document.getElementById('deliver').style.visibility = "visible"
 }
