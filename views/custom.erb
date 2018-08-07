@@ -4,41 +4,23 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
 </head>
 
 <body>
-	<div class="wrapper">
-		<header>
-			<nav class="nav">
-				<div class="menu-icon">
-					<i class="fa fa-bars fa-2x"></i>
-				</div>
-				<div class="logo">
-					<a href="/">Costello<span>'</span>s</a>
-				</div>
-				<div class="menu">
-					<ul>
-						<li><a href="/">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="/custom" class="active">Make It</a></li>
-						<li><a href="/contact">Contact</a></li>
-					</ul>
-				</div>
-			</nav>
-		</header>	
+
 		<div class="app-section">
-			<div class="order-box">
+			<div class="side">
+				<h1>Costello's Pizza Maker</h1>
+			</div>
+
+			<div class="main">
 				<form method="post" action="/order">
-					<h1>Order Here</h1>
-					<div class="left">
 						<p id="pic1">Size:</p> <input type="radio" name="size" value="small">Small
 						<input type="radio" name="size" value="medium"> Medium
 						<input type="radio" name="size" value="large"> Large<br>
 						<p>Crust:</p> <input type="checkbox" name="crust" value="thin">Thin
 						<input type="checkbox" name="crust" value="pan"> Pan<br>
-					</div>
-
-					<div class="right">
 						<p>Toppings:</p> 
 						<% meats.each do |meat|%>
 							<input type="checkbox" name="meats[]" value="<%= meat%>"><%= meat.capitalize%>
@@ -46,15 +28,13 @@
 						<p>Vegetables:</p> 
 						<% veggies.each do |vegs|%>
 							<input type="checkbox" name="veggies[]" value="<%= vegs%>"><%= vegs.capitalize%>
-							<% end%>
-					</div>
+							<% end%>					
 					<div class="sub">
 						<input type="submit" value="Submit Order">
 					</div>
 				</form>
 			</div>
 		</div>
-	</div>
 </body>
 
 <script type="text/javascript">
