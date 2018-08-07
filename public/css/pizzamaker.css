@@ -3,7 +3,7 @@ body {
 	padding: 0;
 	background: #fff;
 	font-family: 'Quicksand';
-	animation: fadeIn 5s;
+	animation: fadeIn 4s;
 }
 
 @keyframes fadeIn {
@@ -194,7 +194,24 @@ nav ul li a:hover {
 	text-align: center;
 	letter-spacing: 2px;
 	outline: none;
-	border: 2px solid #000;
+	border: 0.2em solid #000;
 	border-radius: 10px;
 }
 
+
+
+
+.sub input[type="submit"] {
+	margin-top: 50px;
+	outline: none;
+	border: 1px solid #ff5400;
+	padding: 10px;
+	background: transparent;
+	font-size: 24px;
+	border-radius: 10px;
+}
+
+.sub input[type="submit"]:hover {
+	background-color: #ff5400;
+	color: #fff;
+}
