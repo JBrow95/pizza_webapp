@@ -1,6 +1,6 @@
 <head>
 	<title>Costello's | Home</title>
-	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="css/pizzamaker.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
@@ -9,31 +9,61 @@
 
 <body>
 
-		<div class="app-section">
-			<div class="side">
-				<h1>Costello's Pizza Maker</h1>
-			</div>
+	<div class="navbar">
+		<header>
+				<nav>
+					<div class="menu-icon">
+						<i class="fa fa-bars fa-2x"></i>
+					</div>
+					<div class="logo">
+						<a href="/">Costello<span>'</span>s</a>
+					</div>
+					<div class="menu">
+						<ul>
+							<li><a href="/">Home</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="/custom" class="active">Make It</a></li>
+							<li><a href="/contact">Contact</a></li>
+						</ul>
+					</div>
+				</nav>
+			</header>	
+		</div>
 
-			<div class="main">
-				<form method="post" action="/order">
-						<p id="pic1">Size:</p> <input type="radio" name="size" value="small">Small
-						<input type="radio" name="size" value="medium"> Medium
-						<input type="radio" name="size" value="large"> Large<br>
-						<p>Crust:</p> <input type="checkbox" name="crust" value="thin">Thin
-						<input type="checkbox" name="crust" value="pan"> Pan<br>
+		<div class="header-row">
+			<h1>Build Your Own</h1>
+		</div>
+
+		<div class="row">
+			<form method="post" action="/order">
+				<div class="tops">
+						<p>Size:</p> <input type="radio" name="size" value="small"><span class="checkboxtext">Small</span>
+						<input type="radio" name="size" value="medium"> <span class="checkboxtext">Medium</span>
+						<input type="radio" name="size" value="large"> <span class="checkboxtext">Large</span>
+						<p>Crust:</p> <input type="checkbox" name="crust" value="thin"><span class="checkboxtext">Thin</span>
+						<input type="checkbox" name="crust" value="pan"> <span class="checkboxtext">Pan</span><br>
+				</div>
+
+					<div class="tops">
 						<p>Toppings:</p> 
 						<% meats.each do |meat|%>
-							<input type="checkbox" name="meats[]" value="<%= meat%>"><%= meat.capitalize%>
+							<img src="/images/<%= meat.downcase %>.png">
+							<input type="checkbox" name="meats[]" value="<%= meat%>"><span class="checkboxtext"><%= meat.capitalize%></span>
 							<% end%>
+					</div>
+					
+					<div class="tops">	
 						<p>Vegetables:</p> 
 						<% veggies.each do |vegs|%>
-							<input type="checkbox" name="veggies[]" value="<%= vegs%>"><%= vegs.capitalize%>
-							<% end%>					
-					<div class="sub">
-						<input type="submit" value="Submit Order">
+							<img src="/images/<%= vegs.downcase %>.png">
+							<input type="checkbox" name="veggies[]" value="<%= vegs%>"><span class="checkboxtext"><%= vegs.capitalize%></span>
+							<% end%>	
+
+						<div class="sub">
+							<input type="submit" value="Submit Order">
+						</div>
 					</div>
-				</form>
-			</div>
+			</form>
 		</div>
 </body>
 
@@ -42,14 +72,5 @@
 		$(".menu-icon").on("click", function() {
 			$("nav ul").toggleClass("showing");
 		});
-	});
-
-	$(window).on("scroll", function() {
-		if($(window).scrollTop()) {
-			$('nav').addClass('black');
-		}
-		else {
-			$('nav').removeClass('black');
-		}
 	});
 </script>

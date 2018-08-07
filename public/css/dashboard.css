@@ -178,74 +178,8 @@ button:hover {
 }
 
 
-/* Pizza Maker Page */
-
-* {
-    box-sizing: border-box;
-}
-
-.app-section {
-	display: flex;
-	flex-wrap: wrap;
-}
-
-.side {
-	flex: 50%;
-	background-color: #fff;
-	padding: 20px;
-}
-
-.main {
-	flex: 50%;
-	padding: 20px;
-}
-
-@media screen and (max-width: 700px) {
-    .row, .navbar {   
-        flex-direction: column;
-    }
-}
-/*.pic {
-	background: url("http://trottospizza.com/wp-content/uploads/2017/12/pepperoni.png");
-}
-*/
-
-/*@media(max-width: 700px) {
-	.app-section {
-	position: absolute;
-	top: 60%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 100vw;
-	padding: 50px;
-	background: rgba(0,0,0,0.8);
-	box-sizing: border-box;
-	box-shadow: 0 15px 20px rgba(0,0,0,0.6);
-	border-radius: 15px;
-	height: 200vw;
-	}
-}
-
-.sub {
-	margin-top: 20px;
-}
-
-.sub input[type="submit"] {
-	outline: none;
-	text-decoration: none;
-	font-family: 'Quicksand';
-	font-size: 20px;
-	font-weight: normal;
-	background: transparent;
-	border: .5px solid #ff5400;
-	color: #fff;
-	padding: 10px;
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-input[type="submit"]:hover {
-	background-color: #ff5400;
+.order {
+	color: white;
 }
 
 .order h1 {
@@ -257,7 +191,7 @@ input[type="submit"]:hover {
 .order h3 {
 	color: #fff;
 	font-weight: lighter;
-}*/
+}
 
 /* Verify page */
 
@@ -451,3 +385,4 @@ input[type="submit"]:hover {
 	margin-top: 10px;
 	border-radius: 10px;
 }
+
