@@ -250,14 +250,14 @@ button:hover {
 	}
 }
 
-.order button {
+.deliver button {
 	position: absolute;
 	top: 92%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
 
-.order button {
+.deliver button {
 	background: none;
 	color: #ccc;
 	width: 140px;
@@ -270,11 +270,11 @@ button:hover {
 	text-align: center;
 }
 
-.order button:focus {
+.deliver button:focus {
 	outline: none;
 }
 
-.order button:before {
+.deliver button:before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -288,7 +288,7 @@ button:hover {
 	transform: translateX(-130px) skewX(-15deg);
 }
 
-.order button:after {
+.deliver button:after {
 	content: '';
 	display: block;
 	position: absolute;
@@ -302,19 +302,19 @@ button:hover {
 	transform: translate(-100px) /*scaleX(-15deg)*/;
 }
 
-.order button:hover {
+.deliver button:hover {
 	background: #ff5400;
 	cursor: pointer;
 	color: #fff;
 }
 
-.order button:hover:before {
+.deliver button:hover:before {
 	transform: translateX(300px) skewX(-15deg);
 	opacity: .6;
 	transition: 1s;
 }
 
-.order button:hover:after {
+.deliver button:hover:after {
 	transform: translateX(300px) skewX(-15deg);
 	opacity: 1;
 	transition: 1s;
@@ -322,7 +322,7 @@ button:hover {
 
 @media(max-width: 700px) {
 
-.order button {
+.deliver button {
 	background: none;
 	color: #ccc;
 	width: 240px;
@@ -336,11 +336,11 @@ button:hover {
 	top: 80%;
 }
 
-.order button:focus {
+.deliver button:focus {
 	outline: none;
 }
 
-.order button:before {
+.deliver button:before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -354,7 +354,7 @@ button:hover {
 	transform: translateX(-130px) skewX(-15deg);
 }
 
-.order button:after {
+.deliver button:after {
 	content: '';
 	display: block;
 	position: absolute;
@@ -368,25 +368,25 @@ button:hover {
 	transform: translate(-100px) /*scaleX(-15deg)*/;
 }
 
-.order button:hover {
+.deliver button:hover {
 	background: #ff5400;
 	cursor: pointer;
 	color: #fff;
 }
 
-.order button:hover:before {
+.deliver button:hover:before {
 	transform: translateX(300px) skewX(-15deg);
 	opacity: .6;
 	transition: 1s;
 }
 
-.order button:hover:after {
+.deliver button:hover:after {
 	transform: translateX(300px) skewX(-15deg);
 	opacity: 1;
 	transition: 1s;
  }
 
- .deliver input {
+ .deliver input{
 	width: 100%;
 	outline: none;
 	border: none;
@@ -399,7 +399,7 @@ button:hover {
 }
 }
 
-.deliver input {
+.deliver input[type="text"]{
 	width: 100%;
 	outline: none;
 	border: none;
@@ -423,4 +423,42 @@ button:hover {
 	flex-basis: 30%;
 	margin: auto;
 	border: 1px solid #000;
+}
+
+.btn-row {
+	margin: 80px auto 0 auto;
+	max-width: 600px;
+	display: flex;
+}
+
+.col {
+	margin: auto;
+	flex: 1;
+}
+
+.app-section2 h1 {
+	color: #fff;
+}
+
+.carry {
+	color: #fff;
+	text-align: center;
+}
+
+.carry input[type="submit"]{
+	font-family: 'Quicksand';
+	text-align: center;
+    color: #ccc9bf;
+    outline: none;
+    background: transparent;
+    border: 1px solid #ff5400;
+    text-align: center;
+    margin-top: 54px;
+    padding: 15px 38px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#btn:hover {
+	background-color: #ff5400;
 }

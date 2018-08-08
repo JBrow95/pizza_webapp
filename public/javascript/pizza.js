@@ -1,3 +1,3 @@
-function clickShow() {
-	document.getElementById('deliver').style.visibility = "visible"
+function clickFunc() {
+	window.location = "/carry?name=" + document.getElementById("first").value;
 }

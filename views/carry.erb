@@ -29,16 +29,12 @@
 	</div>
 
 		<div class="app-section2">
-			<h1>Thank You <%= first%></h1>
-			<p style="color: white">Enter your Information</p>
-			<p style="color: white">Delivery Charge: $3.00</p>
+			<h1 style="text-align: center">Thank you for choosing Costelo's</h1>
+			<h2 style="color: #fff"><%= first%></h2>
+			<p style="color: white"></p>
+			<h2 style="color: white"><%= order%></h2>
 			<div class="deliver">
-				<form method="post" action="final">
-				<input type="text" name="address" placeholder="Enter address (State, City, Str, Zip">
-				<input type="hidden" name="first" value="<%= first%>">
-				<button type="submit" id="btn1">Delivery</button>
-				</form>
-				<button type="submit" id="btn2" onclick="history.back()">Back</button>
+				<a href="/"><button type="submit" id="btn2">Back</button></a>
 			</div>
 		</div>
 </body>

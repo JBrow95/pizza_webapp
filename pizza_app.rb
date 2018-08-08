@@ -15,6 +15,7 @@ def veggies()
 end
 
 def order(crust, veggies, meats, size) 
+	meats = meats || []
 	price = 0.00
 	size_choice = size().index(size)
 	crust_choice = crust().index(crust)
@@ -27,7 +28,7 @@ def order(crust, veggies, meats, size)
 	else
 		price += 15.00
 	end
-	price.to_s
+	price
 	order = "Size:  #{s.capitalize}<br>Crust:  #{c.capitalize}<br>Vegetables: "
 	veggies.each_with_index do |v, i|
 		order += "#{v.capitalize}"
@@ -45,8 +46,14 @@ def order(crust, veggies, meats, size)
 		end
 		price += 0.75
 	end
-
-	order += "<br>Price: $#{price}"
+	price
+		if price.to_s[-2] == "."
+			pprice = price.to_s.insert(-1, "0")
+		else
+			pprice = price
+		end
+		pprice
+	order += "<br>Price: $#{pprice}"
 	order
 end
 

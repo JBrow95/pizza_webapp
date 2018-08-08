@@ -3,6 +3,7 @@
 	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="javascript/pizza.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
 </head>
 
@@ -34,12 +35,16 @@
 			<div class="order">
 					<h1>Verify Order</h1><br>
 					<h3><%= order%></h3>
-					<button type="submit" id="btn2" onclick="history.back()">Modify</button>
-					<button type="submit" id="btn1">Order</button>
 			</div>
 			<div class="deliver">
-				<input type="text" name="first" placeholder="First Name">
-				<input type="text" name="address" placeholder="Address">
+				<form method="post" action="delivery">
+				<input type="text" name="first" id="first" placeholder="Enter Name">
+				<button type="submit" id="btn1">Delivery</button>
+				</form>
+				<div class="carry">
+					<input type="submit" id="btn" value="Carryout" onclick="clickFunc()">
+				</div>
+				<button type="submit" id="btn2" onclick="history.back()">Modify</button>
 			</div>
 		</div>
 
