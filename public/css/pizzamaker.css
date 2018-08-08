@@ -176,16 +176,19 @@ nav ul li a:hover {
 	background: #fff;
 	outline: none;
 	box-shadow: 0 15px 15px rgba(0,0,0,0.6);
+	border-radius: 5px;
 }
 .tops:nth-child(2) {
 	border-top: 2px solid #ff5400;
 	background: #fff;
 	box-shadow: 0 15px 15px rgba(0,0,0,0.6);
+	border-radius: 5px;
 }
 .tops:nth-child(3) {
 	border-top: 2px solid #ff5400;
 	background: #fff;
 	box-shadow: 0 15px 15px rgba(0,0,0,0.6);
+	border-radius: 5px;
 }
 
 .header-row {
@@ -197,7 +200,7 @@ nav ul li a:hover {
 	text-align: center;
 	letter-spacing: 2px;
 	outline: none;
-	border: 0.2em solid #000;
+	border: 0.1em solid #000;
 	border-radius: 10px;
 	font-size: 12px;
 }

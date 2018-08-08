@@ -14,10 +14,10 @@ get '/custom' do
 end
 
 post '/order' do
-	size = params[:size]
-	crust = params[:crust] 
-	veggies = params[:veggies]
-	meats = params[:meats]
+	size = params[:size] || ""
+	crust = params[:crust] || ""
+	veggies = params[:veggies] || ""
+	meats = params[:meats] || ""
 	session[:order] = order(crust, veggies, meats, size)
 	redirect '/result'
 end

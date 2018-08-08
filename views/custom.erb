@@ -40,9 +40,12 @@
 						<p>Size:</p> <input type="radio" name="size" value="small"><span class="checkboxtext">Small</span>
 						<input type="radio" name="size" value="medium"> <span class="checkboxtext">Medium</span>
 						<input type="radio" name="size" value="large"> <span class="checkboxtext">Large</span>
-						<p>Crust:</p> <input type="checkbox" name="crust" value="thin"><span class="checkboxtext">Thin</span>
-						<input type="checkbox" name="crust" value="pan"> <span class="checkboxtext">Pan</span><br>
+						<p>Crust:</p> <input type="radio" name="crust" value="thin"><span class="checkboxtext">Thin</span>
+						<input type="radio" name="crust" value="pan"> <span class="checkboxtext">Pan</span><br>
 
+					<div class="sub">
+							<input type="submit" value="Submit Order">
+					</div>
 				</div>
 
 					<div class="tops">
@@ -59,10 +62,6 @@
 							<img src="/images/<%= vegs.downcase %>.png">
 							<input type="checkbox" name="veggies[]" value="<%= vegs%>"><span class="checkboxtext"><%= vegs.capitalize%></span>
 							<% end%>	
-
-					<div class="sub">
-							<input type="submit" value="Submit Order">
-					</div>
 					</div>
 			</form>
 		</div>

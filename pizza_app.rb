@@ -31,6 +31,7 @@ def order(crust, veggies, meats, size)
 	order = "Size:  #{s.capitalize}<br>Crust:  #{c.capitalize}<br>Vegetables: "
 	veggies.each_with_index do |v, i|
 		order += "#{v.capitalize}"
+		
 		if i != veggies.length - 1
 			order += ", "
 		end
